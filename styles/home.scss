@@ -1,0 +1,376 @@
+@use "./helper/colors";
+@use "./helper/variables";
+@use "./helper/mixins";
+
+.page {
+  min-height: 100vh;
+  &.hero {
+    background: colors.$light-blue;
+    position: relative;
+    @include mixins.flex($just: space-between);
+    .content {
+      position: relative;
+      z-index: 2;
+      .title {
+        font-size: 56px;
+        font-weight: bold;
+        line-height: 72px;
+      }
+      .text {
+        font-size: 18px;
+        line-height: 32px;
+      }
+      .btns {
+        margin-top: 42px;
+        @include mixins.flex($just: flex-start);
+        gap: 43px;
+      }
+      @include mixins.flex($dir: column, $align: flex-start);
+      width: 562px;
+      min-width: 562px;
+    }
+    .hero-image {
+      //   position: absolute;
+      //   right: 40px;
+      //   bottom: 65px;
+      max-width: 40vw;
+      margin-right: calc(40px - variables.$side-margin-lg);
+    }
+  }
+  &.adv {
+    @include mixins.flex();
+    .main {
+      @include mixins.flex($just: space-between);
+      flex: 1;
+      // gap: 22px;
+      > img {
+        margin-right: calc(40px - variables.$side-margin-lg);
+        max-width: 50vw;
+      }
+    }
+    .adv-list {
+      @include mixins.flex($dir: column);
+      gap: 57px;
+    }
+    .advantage {
+      @include mixins.flex($align: flex-start);
+      gap: 16px;
+      img {
+        // transform: translateY(-25%);
+      }
+      &-title {
+        font-size: 32px;
+      }
+      &-text {
+        max-width: 410px;
+        font-size: 16px;
+        line-height: 32px;
+      }
+    }
+  }
+  &.locate {
+    @include mixins.flex($align: stretch);
+    gap: 33px;
+    $padding: 48px;
+    padding: {
+      top: 100px;
+      bottom: 100px;
+    }
+    .item {
+      @include mixins.flex($dir: column, $just: space-between);
+      .title {
+        color: colors.$black;
+        line-height: 1.4em;
+        font: {
+          size: 40px;
+          weight: bold;
+        }
+      }
+      .content {
+        color: colors.$light-gray;
+        @include mixins.flex($dir: column);
+        gap: 14px;
+        line-height: 1.6em;
+      }
+      border-radius: 24px;
+      min-height: 611px;
+      max-height: 770px;
+      padding: $padding;
+      &:first-of-type {
+        flex: 2;
+        background: colors.$light-purple;
+        > img {
+          max-width: calc(100% - $padding);
+          width: 80%;
+        }
+      }
+      &:last-of-type {
+        flex: 3;
+        background: colors.$light-blue;
+        > img {
+          max-width: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+  &.operations {
+    @include mixins.flex($dir: column, $align: stretch);
+    gap: 75px;
+    min-height: unset;
+    header {
+      .title {
+        font: {
+          size: 48px;
+          weight: bold;
+        }
+      }
+      .text {
+        margin-top: 15px;
+        color: colors.$gray;
+        line-height: 30px;
+        max-width: 830px;
+      }
+    }
+    .items {
+      @include mixins.flex($just: space-between);
+      gap: 40px;
+    }
+    .item {
+      @include mixins.flex($dir: column, $align: flex-start);
+      .title {
+        font: {
+          size: 24px;
+          weight: bold;
+        }
+      }
+      .text {
+        color: colors.$gray;
+      }
+      gap: 20px;
+    }
+  }
+  &.companies {
+    @include mixins.flex($dir: column, $align: flex-start);
+    .title {
+      font: {
+        size: 48px;
+        weight: bold;
+      }
+    }
+    .company-list {
+      margin-top: 42px;
+      @include mixins.flex($just: center);
+      gap: 24px;
+      flex-wrap: wrap;
+      .img-back {
+        @include mixins.flex();
+        width: 205px;
+        height: 110px;
+        border-radius: 12px;
+        background: white;
+      }
+    }
+  }
+  &.comments {
+    min-height: unset;
+    @include mixins.flex();
+    gap: 24px;
+    .comment {
+      background: white;
+      padding: 48px;
+      border-radius: 24px;
+      .user {
+        @include mixins.flex($just: space-between);
+        margin-top: 32px;
+      }
+      .text {
+        color: colors.$gray;
+        font-size: 18px;
+        line-height: 28px;
+      }
+      .user-info {
+        @include mixins.flex();
+        gap: 16px;
+        .name {
+          font: {
+            size: 22px;
+            weight: bold;
+          }
+        }
+        .job {
+          color: colors.$gray;
+          font-size: 14px;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+  &.elevate {
+    min-height: unset;
+    margin: 0 -70px;
+    .container {
+      padding: 30px {
+        left: 70px;
+      }
+      border-radius: 24px;
+      @include mixins.flex($just: space-between);
+      background: colors.$light-blue;
+      > img {
+        max-width: 60%;
+      }
+    }
+    .content {
+      @include mixins.flex($dir: column, $align: flex-start);
+      gap: 30px;
+    }
+    .title {
+      font: {
+        size: 48px;
+        weight: bold;
+      }
+      line-height: 50px;
+    }
+    .text {
+      color: colors.$gray;
+      line-height: 28px;
+    }
+    .btn:first-of-type {
+      margin-right: 25px;
+    }
+  }
+}
+
+@include mixins.mediaQuery(xl) {
+  .page {
+    &.hero {
+      @include mixins.side-margin(md);
+      .hero-image {
+        margin-right: calc(40px - variables.$side-margin-md);
+      }
+    }
+  }
+}
+
+@include mixins.mediaQuery(lg) {
+  .page {
+    &.hero {
+      @include mixins.side-margin(sm);
+      .content {
+        width: 400px;
+        min-width: 400px;
+        .title {
+          font-size: 36px;
+          line-height: 45px;
+        }
+        .text {
+          font-size: 16px;
+          line-height: 20px;
+        }
+      }
+      .hero-image {
+        margin-right: calc(40px - variables.$side-margin-sm);
+      }
+    }
+    &.adv {
+      .main {
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 50px;
+        > img {
+          margin-right: 0;
+          max-width: unset;
+          @include mixins.square(80vw);
+        }
+        .advantage {
+          img {
+            @include mixins.square(50px);
+            transform: translateY(-30%);
+          }
+        }
+      }
+    }
+    &.locate {
+      flex-direction: column;
+      align-items: center;
+      .item {
+        max-width: min(100%, 500px);
+        flex: unset !important;
+      }
+    }
+    &.comments {
+      flex-direction: column;
+    }
+    &.elevate {
+      min-width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+      margin: 0;
+      .container {
+        border-radius: 0;
+      }
+    }
+  }
+}
+
+@include mixins.mediaQuery(md) {
+  .page {
+    min-height: 100vh;
+    &.hero {
+      padding-bottom: variables.$nav-height;
+      flex-direction: column-reverse;
+      justify-content: center;
+      gap: 30px;
+      .content {
+        width: 100%;
+        min-width: 100%;
+      }
+      .hero-image {
+        // height: 250px;
+        width: 80vw;
+        @include mixins.square(80vw);
+        max-width: unset;
+      }
+    }
+    &.locate {
+      .item {
+        .title {
+          font-size: 30px;
+        }
+      }
+    }
+    &.operations {
+      .items {
+        flex-direction: column;
+      }
+    }
+    &.elevate {
+      .container {
+        flex-direction: column-reverse;
+        > img {
+          @include mixins.square(100%, true);
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}
+
+@include mixins.mediaQuery(sm) {
+  .page {
+    &.comments {
+      .comment {
+        .user {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 10px;
+        }
+        .user-info {
+          img {
+            @include mixins.square(50px);
+          }
+        }
+      }
+    }
+  }
+}
