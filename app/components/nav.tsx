@@ -1,46 +1,48 @@
-"use client";
+/** @format */
 
-import logoImg from "@/assets/svg/logo.svg";
-import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
+'use client';
+
+import logoImg from '@/assets/svg/logo.svg';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useState } from 'react';
 
 export default function Nav() {
   const links = [
     {
-      name: "Features",
-      href: "/",
+      name: 'Features',
+      href: '/',
     },
     {
-      name: "Solutions",
-      href: "/",
+      name: 'Solutions',
+      href: '/',
     },
     {
-      name: "Pricing",
-      href: "/",
+      name: 'Pricing',
+      href: '/',
     },
     {
-      name: "Token",
-      href: "/",
+      name: 'Token',
+      href: '/',
     },
     {
-      name: "Developer",
-      href: "/",
+      name: 'Developer',
+      href: '/',
     },
     {
-      name: "Resource",
-      href: "/",
+      name: 'Resource',
+      href: '/',
     },
   ];
 
-  const lang = "English";
+  const lang = 'English';
 
   const [navOpen, setNavOpen] = useState(false);
 
   return (
     <nav className="main-nav">
       <Image className="logo" src={logoImg} alt="logo" />
-      <div className={"nav-contents " + (navOpen ? "open " : "")}>
+      <div className={'nav-contents ' + (navOpen ? 'open ' : '')}>
         <span className="close-btn" onClick={() => setNavOpen(false)}>
           X
         </span>
@@ -59,7 +61,7 @@ export default function Nav() {
             <Link href="/sign-in" className="btn deflated">
               Sign In
             </Link>
-            <Link href="create-account" className="btn ">
+            <Link href="create-account" className="btn">
               Create an account
             </Link>
           </div>

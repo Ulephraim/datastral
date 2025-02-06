@@ -1,5 +1,7 @@
-@use "./colors";
-@use "./variables";
+/** @format */
+
+@use './colors';
+@use './variables';
 
 @mixin button(
   $color: white,
@@ -11,10 +13,41 @@
     $color: colors.$black;
     $background: transparent;
     $border: colors.$black;
+    &:hover {
+      color: colors.$white;
+      background: colors.$black;
+    }
   }
-  padding: 10px 17px;
+  padding: 8px 20px;
   border: 2px solid $border;
-  border-radius: 12px;
+  border-radius: 50px;
+  background: $background;
+  color: $color;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@mixin content-button(
+  $color: white,
+  $background: colors.$primary,
+  $border: colors.$primary,
+  $template: none
+) {
+  @if ($template == deflated) {
+    $color: colors.$black;
+    $background: transparent;
+    $border: colors.$black;
+    &:hover {
+      color: colors.$white;
+      background: colors.$black;
+    }
+  }
+
+  padding: 12px 20px;
+  border: 2px solid $border;
+  border-radius: 10px;
   background: $background;
   color: $color;
   text-decoration: none;

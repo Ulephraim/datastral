@@ -1,5 +1,7 @@
-import Image from "next/image";
-import heroImage from "@/assets/svg/hero.svg";
+/** @format */
+
+import Image from 'next/image';
+import heroImage from '@/assets/svg/hero.svg';
 
 export default function Hero() {
   return (
@@ -15,8 +17,8 @@ export default function Hero() {
           eliminating the difficulties associated.
         </p>
         <div className="btns">
-          <button className="btn">Getting Started</button>
-          <button className="btn deflated">Learn More</button>
+          <button className="cnt-btn">Getting Started</button>
+          <button className="cnt-btn deflated">Learn More</button>
         </div>
       </div>
       <Image className="hero-image" src={heroImage} alt="hero" />

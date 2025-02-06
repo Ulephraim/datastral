@@ -1,11 +1,13 @@
-@use "./helper/colors";
-@use "./helper/variables";
-@use "./helper/mixins";
+/** @format */
+
+@use './helper/colors';
+@use './helper/variables';
+@use './helper/mixins';
 
 .page {
   min-height: 100vh;
   &.hero {
-    background: colors.$light-blue;
+    background: colors.$light-green;
     position: relative;
     @include mixins.flex($just: space-between);
     .content {
@@ -15,6 +17,7 @@
         font-size: 56px;
         font-weight: bold;
         line-height: 72px;
+        margin-bottom: 10px;
       }
       .text {
         font-size: 18px;
@@ -23,16 +26,13 @@
       .btns {
         margin-top: 42px;
         @include mixins.flex($just: flex-start);
-        gap: 43px;
+        gap: 35px;
       }
       @include mixins.flex($dir: column, $align: flex-start);
       width: 562px;
       min-width: 562px;
     }
     .hero-image {
-      //   position: absolute;
-      //   right: 40px;
-      //   bottom: 65px;
       max-width: 40vw;
       margin-right: calc(40px - variables.$side-margin-lg);
     }
@@ -87,7 +87,7 @@
         }
       }
       .content {
-        color: colors.$light-gray;
+        color: colors.$mid-green;
         @include mixins.flex($dir: column);
         gap: 14px;
         line-height: 1.6em;
@@ -106,7 +106,7 @@
       }
       &:last-of-type {
         flex: 3;
-        background: colors.$light-blue;
+        background: colors.$light-green;
         > img {
           max-width: 100%;
           width: 100%;
@@ -215,7 +215,7 @@
       }
       border-radius: 24px;
       @include mixins.flex($just: space-between);
-      background: colors.$light-blue;
+      background: colors.$light-green;
       > img {
         max-width: 60%;
       }

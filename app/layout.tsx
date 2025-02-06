@@ -7,14 +7,14 @@ import Nav from '@/app/components/nav';
 import Footer from '@/app/components/footer';
 
 export const metadata: Metadata = {
-  title: 'Datastral - Decentralized File Storage & Collaboration',
+  title: 'Datastral - Content Management for Retail',
   description:
-    'Datastral is a secure, decentralized file manager for cloud storage and IPFS pinning. Store, share, and collaborate on files privately without subscriptions.',
+    'Datastral is a content management system optimized for retail businesses, enabling efficient data management with robust security measures. It provides real-time storage, management, and analysis of sales reports, customer feedback, and inventory information, eliminating common operational difficulties.',
   openGraph: {
-    images: '',
-    title: 'Datastral - Decentralized Cloud Storage',
+    images: 'https://datastral-template.vercel.app/og-image.jpg',
+    title: 'Datastral - Retail-Focused Content Management',
     description:
-      'Datastral enables seamless file storage, sharing, and collaboration on a decentralized cloud with IPFS pinning—no subscriptions required.',
+      'Optimize your retail business with Datastral. Securely store, manage, and analyze sales reports, customer feedback, and inventory in real time.',
     url: 'https://datastral-template.vercel.app',
     siteName: 'Datastral',
     type: 'website',
