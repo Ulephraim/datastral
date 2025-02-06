@@ -7,17 +7,16 @@ export default function Hero() {
   return (
     <section className="page hero">
       <div className="content">
-        <p className="title">
-          Content management system optimized for retail businesses
-        </p>
+        <p className="title">Retail-Optimized Content Management System</p>
         <p className="text">
-          Deupload enables efficient data management with robust security
-          measures, allowing for real-time storage, management, and analysis of
-          sales reports, customer feedback, and inventory information, thereby
-          eliminating the difficulties associated.
+          Deupload streamlines data management with strong security measures,
+          enabling seamless real-time storage, organization, and analysis of
+          sales reports, customer feedback, and inventory data, effectively
+          removing operational challenges.
         </p>
+
         <div className="btns">
-          <button className="cnt-btn">Getting Started</button>
+          <button className="cnt-btn">Get Started</button>
           <button className="cnt-btn deflated">Learn More</button>
         </div>
       </div>
