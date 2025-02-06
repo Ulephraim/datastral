@@ -1,22 +1,26 @@
-import "../styles/layout.scss";
-import "../styles/main.scss";
-import type { Metadata } from "next";
-import Nav from "@/app/components/nav";
-import Footer from "@/app/components/footer";
+/** @format */
+
+import '../styles/layout.scss';
+import '../styles/main.scss';
+import type { Metadata } from 'next';
+import Nav from '@/app/components/nav';
+import Footer from '@/app/components/footer';
 
 export const metadata: Metadata = {
-  title: "Retail Template",
-  description: "This is a retail company website template",
+  title: 'Datastral - Decentralized File Storage & Collaboration',
+  description:
+    'Datastral is a secure, decentralized file manager for cloud storage and IPFS pinning. Store, share, and collaborate on files privately without subscriptions.',
   openGraph: {
-    images: "https://retail-template.vercel.app/og-image.png",
-    title: "Retail Template",
-    description: "This is a retail company website template",
-    url: "https://retail-template.vercel.app",
-    siteName: "Retail Template",
-    type: "website",
+    images: '',
+    title: 'Datastral - Decentralized Cloud Storage',
+    description:
+      'Datastral enables seamless file storage, sharing, and collaboration on a decentralized cloud with IPFS pinning—no subscriptions required.',
+    url: 'https://datastral-template.vercel.app',
+    siteName: 'Datastral',
+    type: 'website',
   },
   authors: [
-    { name: "Abdullah Ayman", url: "https://abdullah-ayman.vercel.app" },
+    { name: 'Ephraim Imhagbe', url: 'https://ephraimportfolio.vercel.app' },
   ],
 };
 
