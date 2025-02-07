@@ -1,9 +1,11 @@
-import advImage from "@/assets/svg/hero2.svg";
-import globalizeImg from "@/assets/svg/globalize.svg";
-import delightImg from "@/assets/svg/delight.svg";
-import enhanceImg from "@/assets/svg/enhance.svg";
+/** @format */
 
-import Image from "next/image";
+import advImage from '@/assets/svg/hero2.jpg';
+import globalizeImg from '@/assets/svg/globalize.svg';
+import delightImg from '@/assets/svg/delight.svg';
+import enhanceImg from '@/assets/svg/enhance.svg';
+
+import Image from 'next/image';
 
 function Advantage({
   icon,
@@ -46,7 +48,7 @@ export default function Advantages() {
             content="Utilize Deupload as your go-to platform for global product marketing, facilitating collaboration and content management across multiple retail channels."
           />
         </div>
-        <Image src={advImage} alt="advantages" />
+        <Image className="heroImage2" src={advImage} alt="advantages" />
       </div>
     </section>
   );

@@ -7,7 +7,7 @@
 .page {
   min-height: 100vh;
   &.hero {
-    background: colors.$light-green;
+    background: colors.$white;
     position: relative;
     @include mixins.flex($just: space-between);
     .content {
@@ -34,6 +34,7 @@
     }
     .hero-image {
       max-width: 40vw;
+      max-height: fit-content;
       margin-right: calc(40px - variables.$side-margin-lg);
     }
   }
@@ -46,6 +47,7 @@
       > img {
         margin-right: calc(40px - variables.$side-margin-lg);
         max-width: 50vw;
+        max-height: fit-content;
       }
     }
     .adv-list {

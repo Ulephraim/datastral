@@ -16,6 +16,12 @@
   z-index: 10;
   gap: 42px;
   height: variables.$nav-height;
+  .logo {
+    width: 160px;
+    height: 40px;
+    object-fit: cover;
+  }
+
   .nav-contents {
     flex: 1;
 

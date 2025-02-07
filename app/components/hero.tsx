@@ -1,7 +1,7 @@
 /** @format */
 
 import Image from 'next/image';
-import heroImage from '@/assets/svg/hero.svg';
+import heroImage from '@/assets/svg/hero.jpg';
 
 export default function Hero() {
   return (
@@ -9,7 +9,7 @@ export default function Hero() {
       <div className="content">
         <p className="title">Retail-Optimized Content Management System</p>
         <p className="text">
-          Deupload streamlines data management with strong security measures,
+          Datastral streamlines data management with strong security measures,
           enabling seamless real-time storage, organization, and analysis of
           sales reports, customer feedback, and inventory data, effectively
           removing operational challenges.
