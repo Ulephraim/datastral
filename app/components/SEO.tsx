@@ -1,15 +1,16 @@
-// import { useRouter } from "next/navigation";
-import Head from "next/head";
+/** @format */
+
+import Head from 'next/head';
 
 const siteMetadata = {
-  title: "SaaS Retail Website Template",
+  title: 'Datastral - Content Management for Retail',
   description:
-    "SaaS Retail Website Template is a modern and responsive website template for SaaS companies, startups, and retail businesses.",
-  siteUrl: "https://retail-template.vercel.app",
+    'Datastral is a content management system optimized for retail businesses, enabling efficient data management with robust security measures. It provides real-time storage, management, and analysis of sales reports, customer feedback, and inventory information, eliminating common operational difficulties.',
+  siteUrl: 'https://datastral-template.vercel.app',
   siteLogo:
-    "https://retail-template.vercel.app/_next/static/media/logo.d5be2fb3.svg",
-  socialBanner: "/og-image.png",
-  author: "Abdullah Ayman",
+    'https://datastral-template.vercel.app/_next/static/media/logo.d5be2fb3.svg',
+  socialBanner: 'https://datastral-template.vercel.app/og-image.jpg',
+  author: 'Ephraim Imhagbe',
 };
 
 interface CommonSEOProps {
@@ -19,10 +20,9 @@ interface CommonSEOProps {
   ogImage:
     | string
     | {
-        "@type": string;
+        '@type': string;
         url: string;
       }[];
-  //   twImage: string
   canonicalUrl?: string;
 }
 
@@ -31,20 +31,14 @@ const CommonSEO = ({
   description,
   ogType,
   ogImage,
-  // twImage,
   canonicalUrl,
 }: CommonSEOProps) => {
-  // const router = useRouter();
   return (
     <Head>
       <title>{title}</title>
       <meta name="robots" content="follow, index" />
       <meta name="description" content={description} />
-      <meta
-        property="og:url"
-        // content={`${siteMetadata.siteUrl}${router.asPath}`}
-        content={`${siteMetadata.siteUrl}`}
-      />
+      <meta property="og:url" content={siteMetadata.siteUrl} />
       <meta property="og:type" content={ogType} />
       <meta property="og:site_name" content={siteMetadata.title} />
       <meta property="og:description" content={description} />
@@ -56,19 +50,7 @@ const CommonSEO = ({
       ) : (
         <meta property="og:image" content={ogImage} key={ogImage} />
       )}
-      {/* <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content={siteMetadata.twitter} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={twImage} /> */}
-      {/* <link
-        rel="canonical"
-        href={
-          canonicalUrl
-            ? canonicalUrl
-            : `${siteMetadata.siteUrl}${router.asPath}`
-        }
-      /> */}
+      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
     </Head>
   );
 };
@@ -79,14 +61,13 @@ interface PageSEOProps {
 }
 
 export const PageSEO = ({ title, description }: PageSEOProps) => {
-  const ogImageUrl = siteMetadata.siteUrl + siteMetadata.socialBanner;
+  const ogImageUrl = siteMetadata.socialBanner;
   return (
     <CommonSEO
       title={title}
       description={description}
       ogType="website"
       ogImage={ogImageUrl}
-      // twImage={twImageUrl}
     />
   );
 };

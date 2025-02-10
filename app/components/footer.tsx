@@ -1,12 +1,14 @@
-import secureBadge from "@/assets/svg/secure-badge.svg";
+/** @format */
 
-import facebookIcon from "@/assets/svg/facebook.svg";
-import twitterIcon from "@/assets/svg/twitter.svg";
-import youtubeIcon from "@/assets/svg/youtube.svg";
-import mediumIcon from "@/assets/svg/medium.svg";
+import secureBadge from '@/assets/svg/secure-badge.svg';
 
-import Image from "next/image";
-import Link from "next/link";
+import facebookIcon from '@/assets/svg/facebook.svg';
+import twitterIcon from '@/assets/svg/twitter.svg';
+import youtubeIcon from '@/assets/svg/youtube.svg';
+import mediumIcon from '@/assets/svg/medium.svg';
+
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Footer() {
   const linksLists: {
@@ -14,36 +16,36 @@ export default function Footer() {
     links: { name: string; href?: string }[];
   }[] = [
     {
-      title: "Products",
+      title: 'Products',
       links: [
-        { name: "Features" },
-        { name: "Solutions" },
-        { name: "Pricing" },
-        { name: "Token" },
-        { name: "Security" },
-        { name: "Comparison" },
+        { name: 'Features' },
+        { name: 'Solutions' },
+        { name: 'Pricing' },
+        { name: 'Token' },
+        { name: 'Security' },
+        { name: 'Comparison' },
       ],
     },
     {
-      title: "Resource",
+      title: 'Resource',
       links: [
-        { name: "Whitepaper" },
-        { name: "Developer" },
-        { name: "Brand Kits" },
-        { name: "Compliance" },
-        { name: "Privacy Policy" },
-        { name: "Terms of service" },
+        { name: 'Whitepaper' },
+        { name: 'Developer' },
+        { name: 'Brand Kits' },
+        { name: 'Compliance' },
+        { name: 'Privacy Policy' },
+        { name: 'Terms of service' },
       ],
     },
     {
-      title: "Community",
+      title: 'Community',
       links: [
-        { name: "Guide" },
-        { name: "Blog" },
-        { name: "FAQs" },
-        { name: "Forum" },
-        { name: "Help center" },
-        { name: "Support desk" },
+        { name: 'Guide' },
+        { name: 'Blog' },
+        { name: 'FAQs' },
+        { name: 'Forum' },
+        { name: 'Help center' },
+        { name: 'Support desk' },
       ],
     },
   ];
@@ -51,11 +53,11 @@ export default function Footer() {
     <footer className="main-footer">
       <div className="container">
         <div className="about">
-          <p className="title">What is Deupload?</p>
+          <p className="title">What is Datastral ?</p>
           <p className="text">
-            Deupload is a cloud storage services based on Blockchain and Web3
-            technology, designed to help teams collaborate and file sharing in a
-            completely private like never before.
+            Datastral is a blockchain-powered cloud storage service built on
+            Web3 technology, enabling teams to collaborate and share files with
+            unparalleled privacy.
           </p>
           <Image src={secureBadge} alt="secure badge" />
         </div>
@@ -66,7 +68,7 @@ export default function Footer() {
               <ul className="links">
                 {ll.links.map((l) => (
                   <li key={l.name}>
-                    <Link href={l.href ?? ""}>{l.name}</Link>
+                    <Link href={l.href ?? ''}>{l.name}</Link>
                   </li>
                 ))}
               </ul>
@@ -75,7 +77,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="footer-footer">
-        <p>© 2024 Deupload. Powered by Conikal LLC</p>
+        <p>© 2025 Datastral</p>
         <div className="social-row">
           <Link href="">
             <Image src={facebookIcon} alt="facebook" />

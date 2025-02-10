@@ -1,7 +1,9 @@
-import Image from "next/image";
-import dataIcon from "@/assets/svg/data.svg";
-import recoverIcon from "@/assets/svg/recover.svg";
-import twoFactorIcon from "@/assets/svg/two-factor.svg";
+/** @format */
+
+import Image from 'next/image';
+import dataIcon from '@/assets/svg/data.svg';
+import recoverIcon from '@/assets/svg/recover.svg';
+import twoFactorIcon from '@/assets/svg/two-factor.svg';
 
 function Item({
   icon,
@@ -25,30 +27,30 @@ export default function Operations() {
   return (
     <section className="page operations">
       <header>
-        <p className="title">Streamlined operations with better security</p>
+        <p className="title">Efficient Operations with Enhanced Security</p>
         <p className="text">
-          Retail data management involves handling vast amounts of information
-          due to the constant influx of customers and diverse product offerings.
-          To safeguard your customer data, stock information, and other crucial
-          business resources, Deupload provides top-notch security and data
-          governance models.
+          Managing retail data means dealing with large volumes of information
+          from a steady flow of customers and a wide range of products. To
+          protect your customer records, inventory details, and essential
+          business assets, Datastral offers advanced security and robust data
+          governance.
         </p>
       </header>
       <div className="items">
         <Item
           icon={dataIcon}
           title="Enable internal data control"
-          text="Maintain controlled data visibility by setting appropriate profile and data access limits for your employees and stakeholders."
+          text="Ensure secure data management by defining specific access levels for employees and stakeholders."
         />
         <Item
           icon={recoverIcon}
           title="Recover your last data"
-          text="We actively encrypt data and back them up every week. Accidental data losses can be recovered instantly by  restoring data from the backups."
+          text="Your data is encrypted and backed up weekly, allowing for quick recovery in case of accidental loss."
         />
         <Item
           icon={twoFactorIcon}
           title="Two-factor authentication"
-          text="Mitigate unauthorized access to accounts by mandating additional verification every time your employees sign in to their accounts."
+          text="Enhance security by requiring an extra verification step each time employees log into their accounts."
         />
       </div>
     </section>
