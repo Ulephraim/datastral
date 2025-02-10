@@ -9,7 +9,7 @@ const siteMetadata = {
   siteUrl: 'https://datastral-template.vercel.app',
   siteLogo:
     'https://datastral-template.vercel.app/_next/static/media/logo.d5be2fb3.svg',
-  socialBanner: 'https://datastral-template.vercel.app/og-image.jpg',
+  socialBanner: 'https://datastral-template.vercel.app/datastral.jpg',
   author: 'Ephraim Imhagbe',
 };
 

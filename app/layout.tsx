@@ -9,9 +9,9 @@ import Footer from '@/app/components/footer';
 export const metadata: Metadata = {
   title: 'Datastral - Content Management for Retail',
   description:
-    'Datastral is a content management system optimized for retail businesses, enabling efficient data management with robust security measures. It provides real-time storage, management, and analysis of sales reports, customer feedback, and inventory information, eliminating common operational difficulties.',
+    'Datastral is a content management system optimized for retail businesses, enabling efficient data management with robust security measures.',
   openGraph: {
-    images: 'https://datastral-template.vercel.app/og-image.jpg',
+    images: '/datastral.png',
     title: 'Datastral - Retail-Focused Content Management',
     description:
       'Optimize your retail business with Datastral. Securely store, manage, and analyze sales reports, customer feedback, and inventory in real time.',
@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     siteName: 'Datastral',
     type: 'website',
   },
+
   authors: [
     { name: 'Ephraim Imhagbe', url: 'https://ephraimportfolio.vercel.app' },
   ],
@@ -31,6 +32,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="shortcut icon" href="/favicon-32x32.png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+      </head>
       <body>
         <Nav />
         {children}
