@@ -34,18 +34,18 @@ export default function Advantages() {
         <div className="adv-list">
           <Advantage
             icon={globalizeImg}
-            title="Globalize your marketing"
-            content="Utilize Deupload as your go-to platform for global product marketing, facilitating collaboration and content management across multiple retail channels."
+            title="Expand Your Market Reach"
+            content="Harness Datastral to take your product marketing global, enabling seamless collaboration and content distribution across multiple retail platforms."
           />
           <Advantage
             icon={delightImg}
-            title="Delight your customers"
-            content="Utilize Deupload as your go-to platform for global product marketing, facilitating collaboration and content management across multiple retail channels."
+            title="Enhance Customer Satisfaction"
+            content="Use Datastral to refine your marketing approach, ensuring smooth collaboration and engaging content management that enhances customer satisfaction."
           />
           <Advantage
             icon={enhanceImg}
-            title="Enhance cost-cutting"
-            content="Utilize Deupload as your go-to platform for global product marketing, facilitating collaboration and content management across multiple retail channels."
+            title="Improve Cost Efficiency"
+            content="Leverage Datastral to streamline operations, optimize spending, and enhance efficiency across your marketing processes."
           />
         </div>
         <Image className="heroImage2" src={advImage} alt="advantages" />

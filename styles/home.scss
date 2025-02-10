@@ -40,10 +40,10 @@
   }
   &.adv {
     @include mixins.flex();
+    background-color: white;
     .main {
       @include mixins.flex($just: space-between);
       flex: 1;
-      // gap: 22px;
       > img {
         margin-right: calc(40px - variables.$side-margin-lg);
         max-width: 50vw;
@@ -51,15 +51,17 @@
       }
     }
     .adv-list {
-      @include mixins.flex($dir: column);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
       gap: 57px;
     }
     .advantage {
-      @include mixins.flex($align: flex-start);
+      display: flex;
+      flex-direction: row;
+      align-items: center;
       gap: 16px;
-      img {
-        // transform: translateY(-25%);
-      }
+
       &-title {
         font-size: 32px;
       }
