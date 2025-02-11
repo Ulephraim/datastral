@@ -55,9 +55,9 @@ export default function Footer() {
         <div className="about">
           <p className="title">What is Datastral ?</p>
           <p className="text">
-            Datastral is a blockchain-powered cloud storage service built on
-            Web3 technology, enabling teams to collaborate and share files with
-            unparalleled privacy.
+            Datastral is a retail-optimized content management system designed
+            to streamline data handling, ensuring secure storage, real-time
+            collaboration, and efficient analysis of retail operations data.
           </p>
           <Image src={secureBadge} alt="secure badge" />
         </div>

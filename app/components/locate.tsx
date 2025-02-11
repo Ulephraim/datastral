@@ -1,6 +1,8 @@
-import Image from "next/image";
-import locateImg from "@/assets/svg/locate.svg";
-import leverageImg from "@/assets/svg/leverage.svg";
+/** @format */
+
+import Image from 'next/image';
+import locateImg from '@/assets/svg/locate.svg';
+import leverageImg from '@/assets/svg/leverage.svg';
 
 function Item({
   title,
@@ -32,7 +34,7 @@ export default function Locate() {
       />
       <Item
         title="Leverage OCR and Object Detection to your advantage."
-        content="Accelerate your product-related image searches with Deupload’s OCR and Object Detection technologies, which enable you to search for texts and objects within images."
+        content="Quickly search and retrieve retail documents, invoices, and images with Datastral's intelligent file recognition technology."
         image={leverageImg}
       />
     </section>

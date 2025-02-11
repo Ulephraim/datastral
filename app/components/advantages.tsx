@@ -33,7 +33,8 @@ export default function Advantages() {
           <Advantage
             icon={<Globe size={26} color="white" />}
             title="Expand Your Market Reach"
-            content="Harness Datastral to take your product marketing global, enabling seamless collaboration and content distribution across multiple retail platforms."
+            content="Datastral helps retailers centralize and distribute product content seamlessly across multiple sales channels.
+            "
           />
           <Advantage
             icon={<SmilePlus size={26} color="white" />}
