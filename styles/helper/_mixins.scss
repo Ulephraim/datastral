@@ -101,3 +101,10 @@ $sizes: xs 480, sm 576, md 868, lg 1162, xl 1400;
     min-height: $l;
   }
 }
+
+@mixin icons() {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: colors.$primary;
+}
