@@ -5,6 +5,13 @@
 @use './helper/mixins';
 
 .page {
+  .adv-icon {
+    @include mixins.icons();
+    overflow: clip;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
   min-height: 100vh;
   &.hero {
     background: colors.$white;
@@ -69,13 +76,6 @@
         max-width: 410px;
         font-size: 16px;
         line-height: 32px;
-      }
-      .adv-icon {
-        @include mixins.icons();
-        overflow: clip;
-        align-items: center;
-        justify-content: center;
-        display: flex;
       }
     }
   }

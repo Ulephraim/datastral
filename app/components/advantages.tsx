@@ -1,11 +1,8 @@
 /** @format */
 
 import advImage from '@/assets/svg/hero2.jpg';
-// import globalizeImg from '@/assets/svg/globalize.svg';
-import delightImg from '@/assets/svg/delight.svg';
-import enhanceImg from '@/assets/svg/enhance.svg';
 import Image from 'next/image';
-import { File, Globe, SmilePlus, TrendingDown } from 'lucide-react';
+import { Globe, SmilePlus, TrendingDown } from 'lucide-react';
 import React from 'react';
 
 function Advantage({

@@ -1,12 +1,14 @@
-import "@/styles/home.scss";
-import Image from "next/image";
-import Hero from "@/app/components/hero";
-import Advantages from "./components/advantages";
-import Locate from "./components/locate";
-import Operations from "./components/operations";
-import Companies from "./components/companies";
-import Comments from "./components/comments";
-import Elevate from "./components/elevate";
+/** @format */
+
+import '@/styles/home.scss';
+import Image from 'next/image';
+import Hero from '@/app/components/hero';
+import Advantages from './components/advantages';
+import Locate from './components/locate';
+import Operations from './components/operations';
+// import Companies from './components/companies';
+import Comments from './components/comments';
+import Elevate from './components/elevate';
 
 export default function Home() {
   return (
@@ -15,7 +17,7 @@ export default function Home() {
       <Advantages />
       <Locate />
       <Operations />
-      <Companies />
+      {/* <Companies /> */}
       <Comments />
       <Elevate />
     </main>
