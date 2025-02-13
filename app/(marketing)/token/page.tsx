@@ -2,8 +2,8 @@
 
 import React from 'react';
 
-const page = () => {
+const TokenPage = () => {
   return <div>Token</div>;
 };
 
-export default page;
+export default TokenPage;
