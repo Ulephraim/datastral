@@ -11,27 +11,27 @@ export default function Nav() {
   const links = [
     {
       name: 'Features',
-      href: '/',
+      href: '/about',
     },
     {
       name: 'Solutions',
-      href: '/',
+      href: '/solutions',
     },
     {
       name: 'Pricing',
-      href: '/',
+      href: '/pricing',
     },
     {
       name: 'Token',
-      href: '/',
+      href: '/token',
     },
     {
       name: 'Developer',
-      href: '/',
+      href: '/developer',
     },
     {
       name: 'Resource',
-      href: '/',
+      href: '/resource',
     },
   ];
 
@@ -58,10 +58,10 @@ export default function Nav() {
         <div className="btns">
           <span className="lang">{lang}</span>
           <div>
-            <Link href="/sign-in" className="btn deflated">
+            <Link href="/login" className="btn deflated">
               Sign In
             </Link>
-            <Link href="create-account" className="btn">
+            <Link href="/register" className="btn">
               Create an account
             </Link>
           </div>

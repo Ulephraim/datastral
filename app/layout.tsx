@@ -1,10 +1,7 @@
 /** @format */
-
 import '../styles/layout.scss';
 import '../styles/main.scss';
 import type { Metadata } from 'next';
-import Nav from '@/app/components/nav';
-import Footer from '@/app/components/footer';
 
 export const metadata: Metadata = {
   title: 'Datastral - Content Management for Retail',
@@ -37,11 +34,7 @@ export default function RootLayout({
         <link rel="shortcut icon" href="/favicon-32x32.png" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </head>
-      <body>
-        <Nav />
-        {children}
-        <Footer />
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
