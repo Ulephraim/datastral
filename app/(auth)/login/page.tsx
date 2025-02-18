@@ -46,9 +46,13 @@ const LoginPage: React.FC = () => {
           </button>
         </form>
         <div className={styles.socialLogin}>
-          <p>Or sign in with</p>
+          <p>Or</p>
           {/* social login buttons here */}
+          <button type="submit" className={styles.googleSubmitButton}>
+            Sign in with Google
+          </button>
         </div>
+
         <div className={styles.signUp}>
           <p>
             Don’t have an account?{' '}
