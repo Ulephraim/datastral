@@ -69,11 +69,13 @@
 }
 
 .submitButton:hover {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #14532d;
 }
 
 .googleSubmitButton {
   border: 1px solid #ccc;
+  background-color: white;
+  color: black;
   padding: 0.75rem;
   border-radius: 4px;
   cursor: pointer;
@@ -82,7 +84,7 @@
 }
 
 .googleSubmitButton:hover {
-  background-color: #dddd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .socialLogin {

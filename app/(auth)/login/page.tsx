@@ -1,11 +1,17 @@
 /** @format */
+'use client';
 
 import React from 'react';
 import styles from '../../../styles/Login.module.scss';
 import datastralLogo from '../../../assets/svg/datastral.jpg';
 import Image from 'next/image';
+import { signIn } from 'next-auth/react';
 
 const LoginPage: React.FC = () => {
+  const loginWithGoogle = () => {
+    signIn('google', { callbackUrl: '/maindrive' });
+  };
+
   return (
     <div className={styles.container}>
       <Image className={styles.logo} src={datastralLogo} alt="Datastral Logo" />
@@ -48,7 +54,10 @@ const LoginPage: React.FC = () => {
         <div className={styles.socialLogin}>
           <p>Or</p>
           {/* social login buttons here */}
-          <button type="submit" className={styles.googleSubmitButton}>
+          <button
+            onClick={loginWithGoogle}
+            className={styles.googleSubmitButton}
+          >
             Sign in with Google
           </button>
         </div>
