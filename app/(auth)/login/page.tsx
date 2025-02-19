@@ -65,7 +65,7 @@ const LoginPage: React.FC = () => {
         <div className={styles.signUp}>
           <p>
             Don’t have an account?{' '}
-            <a href="#" className={styles.link}>
+            <a href="/register" className={styles.link}>
               Sign up
             </a>
           </p>

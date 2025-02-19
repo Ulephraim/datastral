@@ -3,8 +3,8 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation'; 
-import { getSession } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
+import { getSession, signOut } from 'next-auth/react';
 import { Session } from 'next-auth';
 
 export default function MainPage() {
@@ -24,6 +24,13 @@ export default function MainPage() {
     checkSession();
   }, [router]);
 
+  // Prevent going back to login after signing in
+  useEffect(() => {
+    if (session) {
+      window.history.replaceState(null, '', '/maindrive');
+    }
+  }, [session]);
+
   if (!session) {
     return <p>Loading...</p>;
   }
@@ -32,6 +39,7 @@ export default function MainPage() {
     <div>
       <h1>Welcome to the Main Page</h1>
       <p>You are logged in as {session.user?.email}</p>
+      <button onClick={() => signOut({ callbackUrl: '/login' })}>Logout</button>
     </div>
   );
 }
