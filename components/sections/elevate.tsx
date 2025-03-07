@@ -16,7 +16,7 @@ export default function Elevate() {
           </p>
           <div className="btns">
             <button className="btn">Get Started</button>
-            <button className="btn deflated">Claim $10 Credit</button>
+            {/* <button className="btn deflated">Claim $10 Credit</button> */}
           </div>
         </div>
         <Image src={elevateImg} alt="elevate" />
