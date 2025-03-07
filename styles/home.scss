@@ -33,7 +33,7 @@
       .btns {
         margin-top: 42px;
         @include mixins.flex($just: flex-start);
-        gap: 35px;
+        gap: 25px;
       }
       @include mixins.flex($dir: column, $align: flex-start);
       width: 562px;
@@ -294,7 +294,7 @@
           @include mixins.square(80vw);
         }
         .advantage {
-          img {
+          .adv-icon {
             @include mixins.square(50px);
             transform: translateY(-30%);
           }
@@ -326,11 +326,16 @@
 
 @include mixins.mediaQuery(md) {
   .page {
+    &.adv {
+      .advantage {
+        display: flex;
+        flex-direction: column;
+      }
+    }
     .adv-icon {
       @include mixins.icons();
       overflow: clip;
-      align-items: center;
-      justify-content: center;
+      align-self: flex-start;
       display: flex;
     }
     min-height: 100vh;
@@ -375,10 +380,6 @@
 
 @include mixins.mediaQuery(sm) {
   .page {
-    .adv-icon {
-      @include mixins.icons-sm();
-    }
-
     &.comments {
       .comment {
         .user {

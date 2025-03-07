@@ -108,9 +108,3 @@ $sizes: xs 480, sm 576, md 868, lg 1162, xl 1400;
   border-radius: 50%;
   background-color: colors.$primary;
 }
-@mixin icons-sm() {
-  max-width: 48px;
-  max-height: 48px;
-  border-radius: 50%;
-  background-color: colors.$primary;
-}
