@@ -326,6 +326,13 @@
 
 @include mixins.mediaQuery(md) {
   .page {
+    .adv-icon {
+      @include mixins.icons();
+      overflow: clip;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+    }
     min-height: 100vh;
     &.hero {
       padding-bottom: variables.$nav-height;
@@ -337,7 +344,6 @@
         min-width: 100%;
       }
       .hero-image {
-        // height: 250px;
         width: 80vw;
         @include mixins.square(80vw);
         max-width: unset;
@@ -369,6 +375,10 @@
 
 @include mixins.mediaQuery(sm) {
   .page {
+    .adv-icon {
+      @include mixins.icons-sm();
+    }
+
     &.comments {
       .comment {
         .user {
