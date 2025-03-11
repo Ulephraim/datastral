@@ -1,15 +1,38 @@
 /** @format */
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import styles from '../../../styles/Login.module.scss';
 import datastralLogo from '../../../assets/svg/datastral.jpg';
 import Image from 'next/image';
 import { signIn } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
 
 const LoginPage: React.FC = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const router = useRouter();
+
   const loginWithGoogle = () => {
     signIn('google', { callbackUrl: '/maindrive' });
+  };
+
+  const handleLogin = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const result = await signIn('credentials', {
+      email,
+      password,
+      redirect: false,
+    });
+
+    if (result?.error) {
+      setError('Invalid email or password');
+    } else {
+      //redirect after login
+      router.push('/maindrive');
+    }
   };
 
   return (
@@ -17,7 +40,9 @@ const LoginPage: React.FC = () => {
       <Image className={styles.logo} src={datastralLogo} alt="Datastral Logo" />
       <div className={styles.loginBox}>
         <h1 className={styles.title}>Sign in to your account</h1>
-        <form className={styles.form}>
+        {error && <p className={styles.error}>{error}</p>}
+
+        <form className={styles.form} onSubmit={handleLogin}>
           <div className={styles.inputGroup}>
             <label htmlFor="email" className={styles.label}>
               Email
@@ -27,6 +52,8 @@ const LoginPage: React.FC = () => {
               id="email"
               name="email"
               className={styles.input}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               required
             />
           </div>
@@ -39,6 +66,8 @@ const LoginPage: React.FC = () => {
               id="password"
               name="password"
               className={styles.input}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               required
             />
           </div>
