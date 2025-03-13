@@ -19,7 +19,8 @@ export async function POST(req: Request) {
       where: { email },
     });
 
-    if (!user || !user.password || typeof user.password !== 'string') {
+    // Check if user exists and has a password
+    if (!user?.password) {
       return NextResponse.json(
         { error: 'Invalid email or password' },
         { status: 401 }
@@ -28,6 +29,7 @@ export async function POST(req: Request) {
 
     // Compare passwords
     const isMatch = await bcrypt.compare(password, user.password);
+
     if (!isMatch) {
       return NextResponse.json(
         { error: 'Invalid email or password' },
