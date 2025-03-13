@@ -1,4 +1,5 @@
 /** @format */
+import SessionWrapper from '@/components/SessionWrapper';
 import '../styles/layout.scss';
 import '../styles/main.scss';
 import type { Metadata } from 'next';
@@ -34,7 +35,9 @@ export default function RootLayout({
         <link rel="shortcut icon" href="/favicon-32x32.png" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </head>
-      <body>{children}</body>
+      <body>
+        <SessionWrapper>{children}</SessionWrapper>
+      </body>
     </html>
   );
 }

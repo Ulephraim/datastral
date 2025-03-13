@@ -18,7 +18,6 @@ export default function Home() {
       <Advantages />
       <Locate />
       <Operations />
-      {/* <Companies /> */}
       <Comments />
       <Elevate />
       <Footer />
