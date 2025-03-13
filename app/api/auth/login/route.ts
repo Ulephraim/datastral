@@ -19,7 +19,7 @@ export async function POST(req: Request) {
       where: { email },
     });
 
-    if (!user) {
+    if (!user || !user.password || typeof user.password !== 'string') {
       return NextResponse.json(
         { error: 'Invalid email or password' },
         { status: 401 }
@@ -35,7 +35,6 @@ export async function POST(req: Request) {
       );
     }
 
-    // Successful login
     return NextResponse.json(
       { message: 'Login successful', user },
       { status: 200 }
