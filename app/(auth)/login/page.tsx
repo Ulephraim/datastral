@@ -9,6 +9,7 @@ import { signIn } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 
 const LoginPage: React.FC = () => {
+  const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -20,7 +21,7 @@ const LoginPage: React.FC = () => {
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-
+    setLoading(true);
     const result = await signIn('credentials', {
       email,
       password,
@@ -29,8 +30,10 @@ const LoginPage: React.FC = () => {
 
     if (result?.error) {
       setError('Invalid email or password');
+      setLoading(false);
     } else {
       //redirect after login
+
       router.push('/maindrive');
     }
   };
@@ -76,8 +79,12 @@ const LoginPage: React.FC = () => {
               Forgot your password?
             </a>
           </div>
-          <button type="submit" className={styles.submitButton}>
-            Continue
+          <button
+            type="submit"
+            className={styles.submitButton}
+            disabled={loading}
+          >
+            {loading ? 'Logging In...' : 'Continue'}
           </button>
         </form>
         <div className={styles.socialLogin}>
