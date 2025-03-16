@@ -4,11 +4,8 @@
  */
 
 const nextConfig = {
-  metadataBase: new URL(
-    process.env.NODE_ENV === 'production'
-      ? 'https://datastral-template.vercel.app'
-      : 'http://localhost:3000'
-  ),
+  reactStrictMode: true,
+  experimental: {},
 };
 
 export default nextConfig;
