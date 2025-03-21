@@ -3,20 +3,15 @@
 import NextAuth, { NextAuthOptions } from 'next-auth';
 import GoogleProvider from 'next-auth/providers/google';
 import CredentialsProvider from 'next-auth/providers/credentials';
-import { PrismaClient } from '@prisma/client';
+import { prisma } from '@/lib/prisma';
 import bcrypt from 'bcryptjs';
-
-const prisma = new PrismaClient();
 
 const authOptions: NextAuthOptions = {
   providers: [
-    // Google OAuth Provider
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID as string,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
     }),
-
-    // Email/Password Authentication
     CredentialsProvider({
       name: 'Credentials',
       credentials: {
@@ -50,7 +45,6 @@ const authOptions: NextAuthOptions = {
       },
     }),
   ],
-
   callbacks: {
     async session({ session, token }) {
       if (session.user) {
@@ -67,9 +61,7 @@ const authOptions: NextAuthOptions = {
       return token;
     },
   },
-
   secret: process.env.NEXTAUTH_SECRET,
-
   pages: {
     signIn: '/login',
   },
